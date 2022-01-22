@@ -12,7 +12,7 @@ const foreCast = (long, lat, callback) => {
             const appended = response.body
             const temperature = appended.current.temperature
             const feelsLike = appended.current.feelslike
-            callback(undefined, `It is ${temperature} degrees, but it feels like ${feelsLike} degrees.`)
+            callback(undefined, `It is ${temperature} degrees, but it feels like ${feelsLike} degrees. The humidity is ${appended.current.humidity}%`)
             
         }
     })
